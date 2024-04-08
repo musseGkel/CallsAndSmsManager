@@ -5,26 +5,24 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".InternationalCallSelector">
+    tools:context=".international_tel_phone_selector">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar2"
+        android:id="@+id/toolbar3"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
-        android:background="#4CAF50"
+        android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
-        app:layout_constraintBottom_toTopOf="@+id/countryCodeRadio"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
         app:title="CallManager"
-        app:titleTextColor="#FDFDFD" />
+        app:titleTextColor="#FDFDFD"
+        tools:layout_editor_absoluteY="1dp" />
 
     <RadioGroup
         android:id="@+id/countryCodeRadio"
-        android:layout_width="80dp"
+        android:layout_width="90dp"
         android:layout_height="180dp"
         android:layout_marginStart="128dp"
         android:layout_marginTop="84dp"
@@ -36,19 +34,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:checked="true"
-            android:text="+39" />
+            android:text="111111" />
 
         <RadioButton
             android:id="@+id/radioButton3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="+33" />
+            android:text="222222" />
 
         <RadioButton
             android:id="@+id/radioButton2"
             android:layout_width="match_parent"
             android:layout_height="37dp"
-            android:text="+49" />
+            android:text="333333" />
 
     </RadioGroup>
 
@@ -58,7 +56,7 @@
         android:layout_height="28dp"
         android:layout_marginStart="1dp"
         android:layout_marginTop="96dp"
-        android:text="Italy"
+        android:text="Emergency"
         android:textAlignment="center"
         app:layout_constraintStart_toEndOf="@+id/countryCodeRadio"
         app:layout_constraintTop_toTopOf="parent" />
@@ -69,7 +67,7 @@
         android:layout_height="23dp"
         android:layout_marginStart="1dp"
         android:layout_marginTop="19dp"
-        android:text="France"
+        android:text="Firefighters"
         android:textAlignment="center"
         app:layout_constraintStart_toEndOf="@+id/countryCodeRadio"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -79,7 +77,7 @@
         android:layout_width="123dp"
         android:layout_height="24dp"
         android:layout_marginTop="20dp"
-        android:text="Germany"
+        android:text="Police"
         android:textAlignment="center"
         app:layout_constraintStart_toEndOf="@+id/countryCodeRadio"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
@@ -88,23 +86,11 @@
         android:id="@+id/selectButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:onClick="selectTelPrefix"
+        android:layout_marginTop="34dp"
+        android:onClick="selectTelNumber"
         android:text="SELECT"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.282"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/countryCodeRadio" />
-
-    <Button
-        android:id="@+id/findInfo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="33dp"
-        android:layout_marginEnd="52dp"
-        android:onClick="findCountryCodeInfo"
-        android:text="FIND INFO"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/countryCodeRadio" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

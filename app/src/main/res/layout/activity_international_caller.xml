@@ -7,28 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".InternationalCaller">
 
-    <TextView
-        android:id="@+id/selectedCountryCode"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="47dp"
-        app:layout_constraintBottom_toTopOf="@+id/callinternationalInput"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/callinternationalInput"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="49dp"
-        android:ems="10"
-        android:hint="tel number"
-        android:inputType="phone"
-        app:layout_constraintBottom_toTopOf="@+id/button5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <Button
         android:id="@+id/button5"
         android:layout_width="wrap_content"
@@ -58,12 +36,66 @@
         android:layout_width="409dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="1dp"
+        android:layout_marginBottom="78dp"
         android:background="#4CAF50"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toTopOf="@+id/choosePrefix"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:title="CallManager"
         app:titleTextColor="#FFFAFA" />
+
+    <TextView
+        android:id="@+id/selectedCountryCode"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="17dp"
+        android:text="int prefix"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/choosePrefix"
+        app:layout_constraintEnd_toStartOf="@+id/choosePrefix"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/choosePrefix" />
+
+    <TextView
+        android:id="@+id/callinternationalInput"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="16dp"
+        android:text="tel number"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/chooseTell"
+        app:layout_constraintEnd_toStartOf="@+id/chooseTell"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/chooseTell" />
+
+    <Button
+        android:id="@+id/choosePrefix"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="19dp"
+        android:onClick="choosePrefix"
+        android:text="CHOOSE"
+        app:layout_constraintBottom_toTopOf="@+id/chooseTell"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/selectedCountryCode"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar4" />
+
+    <Button
+        android:id="@+id/chooseTell"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="494dp"
+        android:onClick="chooseTelNumber"
+        android:text="CHOOSE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/callinternationalInput"
+        app:layout_constraintTop_toBottomOf="@+id/choosePrefix" />
 </androidx.constraintlayout.widget.ConstraintLayout>
